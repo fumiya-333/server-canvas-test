@@ -1,0 +1,25 @@
+@mixin bg-img($bg: null, $bg-repeat: no-repeat, $bg-position: 0% 0%, $bg-size: cover) {
+  @if bg != null {
+    background: $bg;
+  }
+  background-repeat: $bg-repeat;
+  background-position: $bg-position;
+  background-size: $bg-size;
+}
+
+@mixin flexbox($wrap: nowrap, $justify: flex-start, $align: stretch, $flow: row nowrap) {
+  display: flex!important;
+  -webkit-flex-wrap : $wrap!important;
+  -ms-flex-wrap: $wrap!important;
+  flex-wrap: $wrap!important;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+}
+
+@mixin line-clump($line-clump) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clump;
+  overflow: hidden;
+}

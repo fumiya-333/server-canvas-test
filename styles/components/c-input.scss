@@ -1,0 +1,36 @@
+.c-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  outline: 1px solid #AAA;
+}
+
+.c-btn {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 31px;
+  span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    transform : translateY(-50%);
+  }
+}
+
+.c-btn-login {
+  background-color: #1B224C;
+  border: 0.5px solid #1B224C;
+  color: #FFF;
+}
+
+.c-btn-create-pre, .c-btn-password-reset-pre {
+  background-color: #F5A623;
+  border: 0.5px solid #F5A623;
+  color: #FFF;
+}

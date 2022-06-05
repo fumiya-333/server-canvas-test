@@ -1,0 +1,16 @@
+.u-error-msg {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.c-msg {
+  &__inner {
+    &__error, &__info {
+      padding: 12px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+}

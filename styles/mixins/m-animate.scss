@@ -1,0 +1,25 @@
+.m-fadein {
+  animation: fadein 2s ease 0s 1 normal;
+}
+
+.m-fadeout {
+  animation: fadeout 2s ease 0s 1 forwards;
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}

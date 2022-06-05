@@ -1,0 +1,35 @@
+.p-users {
+  padding: 128px 0;
+  &__inner {
+    width: 700px;
+    margin: 0 auto;
+    @include mq(sp){
+      width: 100%;
+      padding: 0 16px;
+    }
+    &__form {
+      &__inner {
+        label {
+          padding: 42px 0 14px 0;
+          &:first-child {
+            padding: 0 0 14px 0;
+          }
+        }
+        &__btn-area {
+          margin-top: 84px;
+          &-btn-login, &-btn-create-pre, &-btn-password-reset-pre {
+            margin: 0 auto;
+            text-align: center;
+          }
+          &-btn-create-pre {
+            margin-top: 16px;
+          }
+        }
+        &__password-reset-link {
+          margin-top: 24px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

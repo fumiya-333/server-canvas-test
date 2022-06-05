@@ -1,0 +1,10 @@
+.c-form {
+  &__inner {
+    label, input, select, textarea, button, a {
+      display: block;
+    }
+    label {
+      font-weight: bold;
+    }
+  }
+}

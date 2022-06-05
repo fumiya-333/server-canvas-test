@@ -1,0 +1,453 @@
+@charset "UTF-8";
+.m-fadein {
+  animation: fadein 2s ease 0s 1 normal;
+}
+
+.m-fadeout {
+  animation: fadeout 2s ease 0s 1 forwards;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+body {
+  font-size: 16px;
+  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+*,
+::before,
+::after {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  word-break: break-all;
+}
+
+html {
+  line-height: 1;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+}
+
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: inherit;
+}
+
+address {
+  font-style: inherit;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: inherit;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+}
+
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+option {
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+[contenteditable]:focus {
+  outline: auto;
+}
+
+table {
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+.l-footer {
+  width: 100%;
+}
+.l-footer__inner {
+  text-align: center;
+  height: 100%;
+  padding: 16px;
+  font-size: 14px;
+}
+
+.l-header {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+.l-header__inner {
+  height: 100%;
+  padding: 16px;
+  font-size: 28px;
+}
+
+.l-main {
+  display: block;
+}
+
+.c-copyright {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.c-form__inner label, .c-form__inner input, .c-form__inner select, .c-form__inner textarea, .c-form__inner button, .c-form__inner a {
+  display: block;
+}
+.c-form__inner label {
+  font-weight: bold;
+}
+
+.c-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #AAA;
+  border-radius: 5px;
+  outline: 1px solid #AAA;
+}
+
+.c-btn {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 31px;
+}
+.c-btn span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.c-btn-login {
+  background-color: #1B224C;
+  border: 0.5px solid #1B224C;
+  color: #FFF;
+}
+
+.c-btn-create-pre, .c-btn-password-reset-pre {
+  background-color: #F5A623;
+  border: 0.5px solid #F5A623;
+  color: #FFF;
+}
+
+.c-link {
+  color: #0000EE;
+  text-decoration: underline;
+}
+.c-link:visited {
+  color: #551A8B;
+  text-decoration: underline;
+}
+.c-link:active {
+  color: #FF0000;
+  text-decoration: underline;
+}
+
+.u-error-msg {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #FF0000;
+}
+
+.c-msg__inner__error, .c-msg__inner__info {
+  padding: 12px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.p-users {
+  padding: 128px 0;
+}
+.p-users__inner {
+  width: 700px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .p-users__inner {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
+.p-users__inner__form__inner label {
+  padding: 42px 0 14px 0;
+}
+.p-users__inner__form__inner label:first-child {
+  padding: 0 0 14px 0;
+}
+.p-users__inner__form__inner__btn-area {
+  margin-top: 84px;
+}
+.p-users__inner__form__inner__btn-area-btn-login, .p-users__inner__form__inner__btn-area-btn-create-pre, .p-users__inner__form__inner__btn-area-btn-password-reset-pre {
+  margin: 0 auto;
+  text-align: center;
+}
+.p-users__inner__form__inner__btn-area-btn-create-pre {
+  margin-top: 16px;
+}
+.p-users__inner__form__inner__password-reset-link {
+  margin-top: 24px;
+  font-size: 14px;
+}
+
+.u-flex-end {
+  display: flex !important;
+  -webkit-flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+  justify-content: flex-end;
+  align-items: stretch;
+  flex-flow: row nowrap;
+}
+
+.u-none {
+  display: none;
+}
+
+.u-error {
+  color: #630015 !important;
+  border-color: #FF0000 !important;
+  background-color: #ffd9e1 !important;
+  outline: solid 0.5px #FF0000 !important;
+}
+
+.u-info {
+  color: #5b8ceb !important;
+  border-color: #5b8ceb !important;
+  background-color: #def0ff !important;
+  outline: solid 0.5px #def0ff !important;
+}

@@ -1,0 +1,10 @@
+.l-header {
+  width: 100%;
+  background-color: black;
+  color: white;
+  &__inner {
+    height: 100%;
+    padding: 16px;
+    font-size: 28px;
+  }
+}
