@@ -8,6 +8,7 @@ export interface CanvasHandles {
   init(width: number, height: number, cls: string): void,
   getWidth(): number,
   getHeight(): number,
+  getContext(): CanvasRenderingContext2D,
   fillText(value: string, font: string, fillStyle: string): void,
   drawImage(image: HTMLImageElement | undefined, sx: number, sy: number, sw: number, sh: number): void,
   getImagefromCanvas(): Promise<HTMLImageElement>,
@@ -36,16 +37,20 @@ export const Canvas: FC<Props> = forwardRef<CanvasHandles>((props, ref) => {
       return height
     },
 
+    getContext() {
+      return canvasRef.current?.getContext('2d')
+    },
+
     fillText(value: string, font: string, fillStyle: string) {
-      const ctx = canvasRef.current.getContext('2d')
-      ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height)
+      const ctx = canvasRef.current?.getContext('2d')
+      ctx.clearRect(0, 0, canvasRef.current?.width, canvasRef.current?.height)
       ctx.font = font
       ctx.fillStyle = fillStyle
-      ctx.fillText(value ,0, 100)
+      ctx.fillText(value, 0, 100)
     },
 
     drawImage(image: HTMLImageElement, sx: number, sy: number, sw: number, sh: number) {
-      const ctx = canvasRef.current.getContext("2d")
+      const ctx = canvasRef.current?.getContext("2d")
       image.onload = () => {
         ctx.drawImage(image, sx, sy, sw, sh)
       }
@@ -54,7 +59,7 @@ export const Canvas: FC<Props> = forwardRef<CanvasHandles>((props, ref) => {
     getImagefromCanvas() {
       return new Promise((resolve, reject) => {
         const image = new Image()
-        const ctx = canvasRef.current.getContext("2d")
+        const ctx = canvasRef.current?.getContext("2d")
         image.onload = () => resolve(image)
         image.onerror = (e) => reject(e)
         image.src = ctx.canvas.toDataURL()
